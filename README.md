@@ -1,56 +1,80 @@
-# Welcome to your Expo app 👋
+# My Diary 🩵
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A cute blue "diary" style to-do app for iPhone, built with Expo and React Native. It turns daily tasks into a small game, with progress flowers, streaks, XP, badges and unlockable themes.
 
-## Get started
+## Features
 
-1. Install dependencies
+**Tasks**
+- Add, edit and delete tasks, with a date and time picker
+- Five categories: Work, Study, Personal, Content, Other
+- High, Medium and Low priority, shown as colored dots with a legend
+- Subtasks and notes on every task
+- Search across titles, notes and subtasks
+- Unfinished tasks carry over to today automatically
+- Reminders: tap the bell on a task to get a notification at its time
 
-   ```bash
-   npm install
-   ```
+**Progress**
+- Daily progress bar with one flower per task
+- Weekly chart of completed tasks
+- Breakdown by priority and by category
+- Calendar with a dot on every day that has tasks
 
-2. Start the app
+**Rewards**
+- XP and levels (10 XP per task, 20 for high priority)
+- A reward path with four stages, each with Bronze, Silver and Gold tiers
+- Unlockable themes: Blue Diary, Pink Blossom, Lavender Dream and Midnight
+- More perks: tulip stickers, sparkly popups, a Diary Queen crown and a secret message
+- Daily streak counter
+- Focus timer that earns bonus XP
 
-   ```bash
-   npx expo start
-   ```
+**Feel**
+- Celebration popups with random encouraging messages
+- Greeting that changes with the time of day
+- All data is saved on the phone, so nothing is lost when the app closes
 
-In the output, you'll find options to open the app in a
+## Screenshots
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+| Home | Calendar | Rewards |
+|------|----------|---------|
+| ![Home](screenshots/home.png) | ![Calendar](screenshots/calendar.png) | ![Rewards](screenshots/rewards.png) |
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+| Progress by priority | Progress by category | Profile |
+|----------------------|----------------------|---------|
+| ![Progress by priority](screenshots/progress-priority.png) | ![Progress by category](screenshots/progress-category.png) | ![Profile](screenshots/profile.png) |
 
-## Get a fresh project
+## Tech stack
 
-When you're ready, run:
+- [Expo](https://expo.dev) SDK 58 and React Native
+- Expo Router, with native tabs
+- TypeScript
+- AsyncStorage for saving data
+- react-native-calendars, expo-notifications, and a date/time picker
+
+## Run it yourself
+
+You need Node.js and the Expo Go app on your iPhone.
 
 ```bash
-npm run reset-project
+npm install
+npx expo start --tunnel
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Scan the QR code with your iPhone camera to open it in Expo Go.
 
-### Other setup steps
+If you hit a version-conflict error during install, use:
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+```bash
+npm install --legacy-peer-deps
+```
 
-## Learn more
+## Notes
 
-To learn more about developing your project with Expo, look at the following resources:
+- Reminders are most reliable in a standalone build rather than Expo Go.
+- The greeting name is set to "Sakshi" in `src/app/index.tsx`. Change it to your own.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## What I learned
 
-## Join the community
+Built step by step with the help of Claude: state management, local storage, theming with React context, notifications and date handling, from a Windows laptop with no Mac.
 
-Join our community of developers creating universal apps.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
